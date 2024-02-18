@@ -39,11 +39,13 @@ function bubblehit(){
 
 bubbles.forEach(function(bbl){
     bbl.addEventListener("click",function(dets){
-        if(bbl.textContent == hitvalue)
+        if(Number(bbl.textContent) == hitvalue)
         {
             hitvalue = newhit();
             score = score +10;
             scr.textContent = score;
+            makebubble();
+            
         }
     })
 })
@@ -53,10 +55,7 @@ bubbles.forEach(function(bbl){
 makebubble();
 runtimer();
 var hitvalue = newhit();
-if(timer > 0)
-{
-    bubblehit();
-    console.log(timer);
-}
+bubblehit();
+
 
 
