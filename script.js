@@ -34,20 +34,18 @@ function newhit(){
 
 
 function bubblehit(){
-    var bubbles = document.querySelectorAll(".bubble");
+    // event bubbleing concept
     var scr = document.querySelector("#score1");
-
-bubbles.forEach(function(bbl){
-    bbl.addEventListener("click",function(dets){
-        if(Number(bbl.textContent) == hitvalue)
+    document.querySelector("#panelbottom").addEventListener("click",function(dets){
+        if(Number(dets.target.textContent)==hitvalue)
         {
+            score += 10;
+            scr.innerHTML = score;
             hitvalue = newhit();
-            score = score +10;
-            scr.textContent = score;
             makebubble();
+
         }
     })
-})
 
 }
 
@@ -55,6 +53,8 @@ makebubble();
 runtimer();
 var hitvalue = newhit();
 bubblehit();
+
+
 
 
 
