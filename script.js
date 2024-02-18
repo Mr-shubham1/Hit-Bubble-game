@@ -20,8 +20,8 @@ function makebubble(){
     var clutter = "" ;
     for(var i =1;i<=200;i++)
     {
-     var random = Math.floor(Math.random()*10);
-     clutter += `<div class="bubble">${random}</div>`;
+    var random = Math.floor(Math.random()*10);
+    clutter += `<div class="bubble">${random}</div>`;
     }
     document.querySelector("#panelbottom").innerHTML = clutter;
 }
@@ -45,7 +45,6 @@ bubbles.forEach(function(bbl){
             score = score +10;
             scr.textContent = score;
             makebubble();
-            
         }
     })
 })
@@ -56,6 +55,8 @@ makebubble();
 runtimer();
 var hitvalue = newhit();
 bubblehit();
+
+
 
 
 
