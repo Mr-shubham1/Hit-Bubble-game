@@ -98,3 +98,18 @@ html,body{
 }
 
 
+@media (max-width:600px) {
+    #paneltop .elem{
+        scale: .8;
+    }
+    #paneltop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        padding: auto 100px;
+    }
+
+}
+
+
